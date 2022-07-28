@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-// const api = require('./public/assets/js/index');
+// const router = require('../routes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // GET Route for homepage
 app.get('/api', (req, res) =>
-  res.sendFile(path.join(__dirname, '../../index.html'))
+  res.sendFile(path.join(__dirname, '../index.html'))
 );
 
 // GET Route for notes page
