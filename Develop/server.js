@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const router = require('./routes/api/routefile');
+// const router = require('./routes/api/routefile');
+const api = require('./routes/indexRoutes.js');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -11,7 +12,23 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', require('./routes/api/routefile'));
+// app.use('/api', require('./routes/api/routefile'));
+app.use('/api', api);
+
+// GET Route for homepage
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, './public/index.html'))
+);
+
+// GET Route for notes page
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, './public/notes.html'))
+);
+
+// Wildcard route to direct users to a 404 page
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, './public/404.html'))
+);
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
