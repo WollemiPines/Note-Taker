@@ -1,13 +1,15 @@
 const notes = require('express').Router();
+const express = require('express');
+const app = express();
 
 // GET Route for retrieving all the notes
-notes.get('/', (req, res) => {
+notes.get('/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
   });
   
-  // POST Route for a new UX/UI tip
-  notes.post('/', (req, res) => {
+  // POST Route for a new notes
+  notes.post('/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
     console.log(req.body);
   
@@ -26,5 +28,5 @@ notes.get('/', (req, res) => {
     }
   });
   
-  module.exports = notes;
+  module.exports = app;
   
