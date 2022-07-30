@@ -1,6 +1,7 @@
 const notes = require('express').Router();
 const express = require('express');
 const app = express();
+const { readFromFile, readAndAppend } = require('../helpers/readfilefun');
 
 // GET Route for retrieving all the notes
 notes.get('/notes', (req, res) => {
