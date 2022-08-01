@@ -1,6 +1,4 @@
 const notes = require('express').Router();
-const express = require('express');
-const app = express();
 const { readFromFile, readAndAppend } = require('../helpers/readfilefun');
 
 // GET Route for retrieving all the notes
@@ -23,11 +21,12 @@ notes.get('/notes', (req, res) => {
       };
   
       readAndAppend(newNote, './db/db.json');
-      res.json(`note added successfully 🚀`);
+      res.json();
+      console.log(`note added successfully 🚀`);
     } else {
       res.error('Error in adding note');
     }
   });
   
-  module.exports = app;
+  module.exports = notes;
   
