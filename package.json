@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start":"node ./public/assets/index.js",
+    "start":"node ./public/assets/js/index.js",
     "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "node ./public/assets/index.js"
+    "web": "node ./public/assets/js/index.js"
   },
   "author": "",
   "license": "ISC",
