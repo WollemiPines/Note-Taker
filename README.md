@@ -16,12 +16,11 @@ for an example of the app in action see; https://drive.google.com/file/d/1XuP5NA
 
 ## Installation Instructions: <a name="install"></a>
 No installation nessecary, simply visit https://radiant-bayou-60560.herokuapp.com/ to use the app.
-The home page should look like...
-<img src ="/public/assets/images/img1">
-Page to enter notes on...
-<img src ="/public/assets/images/img2">
-Once a note is saved...
-<img src ="/public/assets/images/img3">
+![The home page should look like]("/public/assets/images/img1"),
+
+![Page to enter notes on]("/public/assets/images/img2"),
+
+![Once a note is saved]("/public/assets/images/img3"),
 
 
 ## Motivation: <a name="motivation"></a>
