@@ -13,7 +13,7 @@ An interactive webpage that allows users to save notes for later use
 
 
 ## Installation Instructions: <a name="install"></a>
-Clone this repo onto your computer. Navigate to the correct directory on terminal and run NPM install inquirer. Then type node index.js to run the program.
+Clone this repo onto your computer. Navigate to the correct directory on terminal and run NPM install inquirer. Then type node index.js to run the program. as
 
 ## Usage Guidelines: <a name="usage"></a>
 
