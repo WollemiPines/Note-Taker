@@ -1,4 +1,4 @@
-# Note Taker Starter Code
+# Note Taker
 
 ## Project Description <a name="project-description"></a>
 An interactive webpage that allows users to save notes for later use.
